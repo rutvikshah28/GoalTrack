@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/goaltrack_nav"
+    app:startDestination="@id/firstTimeSetup">
+
+    <fragment
+        android:id="@+id/homePage"
+        android:name="com.example.goaltrack.fragments.HomePage"
+        android:label="GoalTrack"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePage_to_addGoal"
+            app:destination="@id/addGoal" />
+        <action
+            android:id="@+id/action_homePage_to_updateGoalFragment"
+            app:destination="@id/updateGoalFragment" />
+        <action
+            android:id="@+id/action_homePage_to_firstTimeSetup"
+            app:destination="@id/firstTimeSetup" />
+    </fragment>
+    <fragment
+        android:id="@+id/addGoal"
+        android:name="com.example.goaltrack.fragments.AddGoal"
+        android:label="Add a Goal"
+        tools:layout="@layout/fragment_add_goal" >
+        <action
+            android:id="@+id/action_addGoal_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateGoalFragment"
+        android:name="com.example.goaltrack.fragments.UpdateGoalFragment"
+        android:label="Edit Goal"
+        tools:layout="@layout/fragment_update_goal" >
+        <action
+            android:id="@+id/action_updateGoalFragment_to_homePage"
+            app:destination="@id/homePage" />
+        <argument
+            android:name="currentGoal"
+            app:argType="com.example.goaltrack.database.model.GoalData" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstTimeSetup"
+        android:name="com.example.goaltrack.fragments.FirstTimeSetup"
+        android:label="Profile"
+        tools:layout="@layout/fragment_first_time_setup" >
+        <action
+            android:id="@+id/action_firstTimeSetup_to_homePage"
+            app:destination="@id/homePage" />
+    </fragment>
+</navigation>
