@@ -30,14 +30,17 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
         readGoals = repository.readGoals
 
     }
+    //Function to read the users
     fun readUsers() : LiveData<List<UserData>>{
         return repository.readUsers()
     }
+    //Function to read the goals
     fun readGoals() : LiveData<List<GoalData>>{
         return repository.readGoals()
     }
     //Now we create the functions to insert the users, goals and quotes
 
+    //Function to insert a user
     fun insertUser(user: UserData){
         //Using the kotlin coroutines to perform this action since we dont want to do database access from main ui thread. Dispatchers.IO ensures the code inside
         //is run from a background thread
@@ -46,6 +49,7 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
+    //Function to insert a goal
     fun insertGoal(goal: GoalData){
         //Using the kotlin coroutines to perform this action since we dont want to do database access from main ui thread. Dispatchers.IO ensures the code inside
         //is run from a background thread
@@ -53,6 +57,8 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
             repository.insertGoal(goal)
         }
     }
+
+    //Function to update a goal
     fun updateGoal(goal: GoalData){
         //Using the kotlin coroutines to perform this action since we dont want to do database access from main ui thread. Dispatchers.IO ensures the code inside
         //is run from a background thread
@@ -60,6 +66,8 @@ class UserViewModel(application: Application) : AndroidViewModel(application) {
             repository.updateGoal(goal)
         }
     }
+
+    //Function to delete a goal
     fun deleteGoal(goal:GoalData){
         //Using the kotlin coroutines to perform this action since we dont want to do database access from main ui thread. Dispatchers.IO ensures the code inside
         //is run from a background thread

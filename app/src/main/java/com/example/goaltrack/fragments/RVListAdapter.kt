@@ -17,7 +17,7 @@ class RVListAdapter : RecyclerView.Adapter<RVListAdapter.RowViewHolder>() {
 
     //Creating an empty goal list
     private var goalList = emptyList<GoalData>()
-
+    //Create the class for the ViewHolder Row
     class RowViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){}
 
 

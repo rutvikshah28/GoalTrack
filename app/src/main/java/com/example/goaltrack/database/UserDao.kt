@@ -5,6 +5,7 @@ import androidx.room.*
 import com.example.goaltrack.database.model.GoalData
 import com.example.goaltrack.database.model.UserData
 
+//Creating the Dao for our user
 @Dao
 interface UserDao {
     //Functions for the database are defined in our UserDao interface

@@ -42,28 +42,37 @@ class UpdateGoalFragment : Fragment() {
 
         //Setting the onClickListeners for the buttons
         btnUpdate.setOnClickListener {
+            //If the user presses update, we check if inputs are filled and then update the database and navigate back
             updateGoal(title, description, date)
         }
 
         btnDelete.setOnClickListener {
+            //If the user presses delete, we update the database to delete the goal and then navigate back
             deleteCurrentGoal(title,description,date)
         }
         btnCancel.setOnClickListener {
+            //If the user presses cancel, we simply navigate back
             findNavController().navigate(R.id.action_updateGoalFragment_to_homePage)
         }
-
+        //Returning the inflated view
         return view
     }
 
+    //Function to update the goal
     private fun updateGoal(title: EditText, description: EditText, date: EditText) {
+
         if(checkInputs(title,description,date)){
             //If this is the case, we update the user into the database
             val goal: GoalData = GoalData(args.currentGoal.goalID,title.text.toString(), description.text.toString(), date.text.toString())
+            //Updating
             mUserViewModel.updateGoal(goal)
+            //Once done, we display appropriate toast
             Toast.makeText(requireContext(),"Successfully updated the goal ${title.text.toString()}!", Toast.LENGTH_LONG).show()
+            //Once done we navigate back to the home fragment
             findNavController().navigate(R.id.action_updateGoalFragment_to_homePage)
         }
         else{
+            //Since checkInputs fails, we display appropriate toast message to the user
             Toast.makeText(requireContext(),"Please fill all the fields!",Toast.LENGTH_LONG).show()
         }
     }
@@ -72,15 +81,18 @@ class UpdateGoalFragment : Fragment() {
     private fun checkInputs(goalTitle: EditText, goalDesc: EditText, goalDate: EditText): Boolean {
         return !(goalTitle.text.toString().isEmpty() || goalDesc.text.toString().isEmpty() || goalDate.text.toString().isEmpty())
     }
-
+    //Function to delete the goal
     private fun deleteCurrentGoal(
         title: EditText,
         description: EditText,
         date: EditText
     ) {
         val goal: GoalData = GoalData(args.currentGoal.goalID,title.text.toString(), description.text.toString(), date.text.toString())
+        //Deleting the goal
         mUserViewModel.deleteGoal(goal)
+        //Displaying appropriate toast
         Toast.makeText(requireContext(),"Deleted the goal ${title.text.toString()}!",Toast.LENGTH_LONG).show()
+        //Once done we navigate back to the home fragment
         findNavController().navigate(R.id.action_updateGoalFragment_to_homePage)
     }
 }

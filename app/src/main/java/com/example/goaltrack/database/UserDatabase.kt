@@ -7,6 +7,7 @@ import androidx.room.RoomDatabase
 import com.example.goaltrack.database.model.GoalData
 import com.example.goaltrack.database.model.UserData
 
+//Creating the database for GoalTrack. Entities included are UserData class and the GoalData class
 @Database(version = 1, entities = [UserData::class, GoalData::class], exportSchema = false)
 abstract class UserDatabase : RoomDatabase() {
     //Creating a function that returns our UserDao

@@ -69,17 +69,18 @@ class HomePage : Fragment() {
         //Setting the layout manager
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        //Observing the goals
+        //Observing the goals and calling the setData function using our list adapter
         mUserViewModel.readGoals.observe(viewLifecycleOwner, Observer {
             goal -> rvListAdapter.setData(goal);
         })
+        //Setting the onClickListener for our floating add button
         val addButton = view.findViewById(R.id.fabAddGoal) as FloatingActionButton
         addButton.setOnClickListener{
+            //We simply navigate to add goal fragment
             findNavController().navigate(R.id.action_homePage_to_addGoal)
         }
 
-
-
+        //Returning the inflated view
         return view
     }
 

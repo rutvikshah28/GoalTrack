@@ -31,6 +31,7 @@ class FirstTimeSetup : Fragment(){
             //We are in the first time setup
             val submit = view.findViewById(R.id.btnSubmitUser) as Button
             submit.setOnClickListener {
+                //Inserting to the database using this function and then navigating to home fragment
                 insertUserToDatabase()
                 Log.d("FirstTimeSetup", "We have done it!")
                 findNavController().navigate(R.id.action_firstTimeSetup_to_homePage)
@@ -39,15 +40,17 @@ class FirstTimeSetup : Fragment(){
 
         }
         else{
+            //We simply navigate to the home fragment
             Log.d("FirstTimeSetup", "Shouldn't get here for the first time :(")
             findNavController().navigate(R.id.action_firstTimeSetup_to_homePage)
         }
+        //Returning the inflated view
         return view
     }
 
 
 
-
+    //Function to inser the user to database
     private fun insertUserToDatabase() {
         //getting the values of the user from EditTexts and Radio Buttons
         val fName = view?.findViewById(R.id.tvFname) as EditText
@@ -75,10 +78,12 @@ class FirstTimeSetup : Fragment(){
 
         }
         else{
+            //If input check fails, we simply display appropriate toast to the user
             Toast.makeText(requireContext(),"Please fill all fields!", Toast.LENGTH_LONG).show()
         }
     }
 
+    //Function to check if inputs are filled
     private fun checkAllInputs(fName: String, lName: String, gender: Int, bDate: String, age: String) : Boolean {
         return !(fName.isEmpty() || lName.isEmpty() || gender == -1 || bDate.isEmpty() || age.isEmpty())
     }
