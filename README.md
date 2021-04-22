@@ -60,10 +60,16 @@
   </ol>
 </details>
 
-<h2 id = "About" />
-
-## __About GoalTrack__
 ___
+
+<h2 id = "About" >
+
+<a href="#About"><img src = "./img/banners/about.png" alt = "about"/></a>
+
+</h2>
+
+
+
 GoalTrack is an _android_ application meant to keep track of personal tasks and goals. The idea for GoalTrack generated from my personal desire to keep track of things. I am very bad at managing my tasks and keeping a track on them. There are numerous applications out there to do this for me but since I am taking a course for Mobile Computing and development in Android, I wanted to create this application so I can use it on a day-to-day basis. This provides me with the comfort of customizing the application in the future and make it an even greater experience. I hope to be able to learn and improvise this so I can share it with people all around to give them one more option of countless similar applications to choose from. As of this moment, GoalTrack is Android only but I hope to develop for iOS in the near future. 
 
 
@@ -92,9 +98,16 @@ Kotlin was used as the main language for programming due to its modernness and e
 >*Learn further about [Android Studio](https://developer.android.com/studio "Android Studio") and [Kotlin.](https://kotlinlang.org/ "Kotlin")*
 ___
 
-<h2 id="Developers" />
+<h2 id="Developers" align="center" >
 
-## __For the Developers__
+<a href="#Developers"><img src = "./img/banners/devs.png" alt = "developers"/></a>
+
+For the Developers
+
+</h2>
+
+
+
 This section provides the configuration, installation and operating details for GoalTrack project for the developers who are interested in it.
 
 <h3 id="dPre" />
@@ -133,9 +146,14 @@ To get started, follow the instructions below:
 
 <!-- Dont forget to add images above, maybe gifs? -->
 ___
-<h2 id="Manifest" />
+<h2 id="Manifest" >
 
-## __Manifest Information__
+<a href="#Manifest"><img src = "./img/banners/manifest.png" alt = "manifest"/></a>
+
+</h2>
+
+
+
 This section provides the list of files that are used in this project. It contains all kotlin and xml fragments file list. Along with each list item here, a short description will be provided of what it does. This will hopefully explain the architecture of GoalTrack and make it clear how OOP concepts are followed with the use of the Model-View-Controller architecture that is implemented. If you want to see the whole file, you can view them by navigating to the following directory in your cloned repository.
 * The follwoing path leads you to all kotlin files.
 ```
@@ -245,9 +263,13 @@ ___
 >This is a part of view architecture for every goal that will be displayed by our RecyclerView. It contains the goal title and the corresponding due date for that goal.
 
 ___
-<h2 id="Users" />
+<h2 id="Users" >
 
-## __For the Users__
+<a href="#Users"><img src = "./img/banners/users.png" alt = "users"/></a>
+
+</h2>
+
+
 This section provides information about how to install the application on an android device. If you are not a developer and want to try it out, please follow the instructions below. If you are a developer but still want to try the application at its current stage, please follow the instructions below to get started.
 ___
 
@@ -269,24 +291,79 @@ To install this application on your device, it is assumed you match the prerequi
 4. Once done, simply find the application on your device, open it up and start enjoying tracking of your tasks and goals.
 ___
 
-<h2 id="Op" />
+<h2 id="Op" >
 
-## __Operating Instructions__
+<a href="#Op"><img src = "./img/banners/operating.png" alt = "Operating"/></a>
+
+</h2>
+
 
 Assuming that you have the application installed, we will now glance at how it works with visual examples of the functionality.
 
+___
 ### *Creating a User Profile*
+A User will be asked to create a profile during first time setup of the application. Given below is the step-wise explanation with images of this operation.
 
+1. Open the application. You will see a screen similar to this
+  
+<p align = "center"><img src="./img/operation/initialSetup.jpg" height = "400" /></p>
+
+2. Fill in the information on this screen
+
+<p align = "center"><img src="./img/operation/initialInformation.jpg" height = "400" /></p>
+
+3. Press the Submit button to save your information.
+
+<p align = "center"><img src="./img/operation/setupDone.jpg" height = "400" /></p>
+
+4. We can now see that the user has been added to the database. We are now at the home screen which initially shows an empty goal list and a random motivational quote.
+   
+___
 ### *Adding a Goal*
 
+Let us go through on how we add a goal to track in the application.
+
+1. On the home screen, press the floating add button on bottom right. You will be redirected to another page. Fill in the information on that page for your goal. 
+   
+<p align = "center"><img src="./img/operation/goalAdd.jpg" height = "400" /></p>
+
+2. Now press the Add button to add this goal. Once done, you will be redirected to Home page where we can now see the goal in the initially empty goal list.
+   
+<p align = "center"><img src="./img/operation/goalAddDone.jpg" height = "400" /></p>
+
+___
 ### *Updating a Goal*     
 
+Let us now go through on how to update/view an existing goal.
+
+1. Click on the goal from your home screen that you want to view/edit and change something if you want. For instance, I change the description here.
+
+<p align = "center"><img src="./img/operation/goalEditChanges.jpg" height = "400" /></p>
+
+2. Once you are happy, you can press the Done button to save the changes
+
+<p align = "center"><img src="./img/operation/goalEdited.jpg" height = "400" /></p>
+
+___
 ### *Deleting a Goal*
+
+1. Click on the goal you want to delete from the home screen and you will be redirected to another page.
+
+<p align = "center"><img src="./img/operation/goalEditChanges.jpg" height = "400" /></p> 
+
+2. Click on the Delete button to remove this goal. You will be redirected back to the home screen where you can see that the goal has been removed.
+
+<p align = "center"><img src="./img/operation/goalDelete.jpg" height = "400" /></p>
+
 ___
 
-<h2 id="BugList" /> 
+<h2 id="BugList" >
 
-## __Bug List__
+<a href="#BugList"><img src = "./img/banners/buglist.png" alt = "Bug List"/></a>
+
+</h2>
+
+
 Known bugs and problems :
 * After First Time Setup, the user can still go back to the fragment since the readUsers is a val and initially it will be 0. There is a need to restart the app so the user can't go back.
 * After Deleting a Goal, the user can make use of the back key on the taskbar top-left to go back to the Goal that was deleted. This may provide an error if we delete a goal, go back and then try to update it.
@@ -294,32 +371,55 @@ Known bugs and problems :
 If any more bugs are found, please use the contact section to reach out to me so I can work on fixing them.
 
 ___
-<h2 id="Troubleshooting" />
+<h2 id="Troubleshooting">
 
-## __Troubleshooting__
+<a href="#Troubleshooting"><img src = "./img/banners/troubleshooting.png" alt = "Troubleshooting"/></a>
+
+</h2>
+
+
 * If the application crashes due to the updating of goals that are deleted, simply restart the application. 
 * If any other bugs are found, restarting the application is the best choice. 
 * There don't seem to be any bugs that may freeze the application yet, if some are found please contact me so I can understand and work on fixing them.
 
 ___
-<h2 id="License" />
+<h2 id="License" >
 
-## __License__
+<a href="#License"><img src = "./img/banners/license.png" alt = "License"/></a>
+
+</h2>
+
+
 This project is licensed under the MIT License. Please find the LICENSE file in the root directory to learn more.
 ___
-<h2 id="Contact" />
+<h2 id="Contact" >
 
-## __Contact__
+<a href="#Contact"><img src = "./img/banners/contact.png" alt = "Contact"/></a>
+
+</h2>
+
+
 You can reach out to me via [email](mailto:rutvikshah28@hotmail.com?subject=[GitHub]%20GoalTrack).
 
-If you want to connect, 
-Instagram
-
-LinkedIN
-
-Website
 ___
 
-<h2 id="Ack" />
+<p align = "center">
+<a href="https://www.instagram.com/rutvikshah__/"><img src="./img/banners/instagram.png" width="40" /></a> 
+<a href = "https://www.linkedin.com/in/rutvikshah28/"><img src="./img/banners/linkedIN.png" width = "40" /> </a> 
+<a href= "https://www.rutvikshah.com"><img src="./img/banners/website.png" width = "40" /></a>
+</p>
 
-## __Acknowledgements__
+___
+
+<h2 id="Ack" >
+
+
+<a href="#Ack"><img src = "./img/banners/acknowledgements.png" alt = "Acknowledgements"/></a>
+
+
+</h2>
+
+* I would like to extend my gratitude towards Dr. Trevor Tomesh who taught me the fundamentals about Mobile Computing and development for Android.
+* I would also like to thank the writers of Android Studio documentation and Kotlin documentations for being a great learning resource
+* I would like to thank Mr. Brad Traversy for teaching me fundamentals of git and github.
+
