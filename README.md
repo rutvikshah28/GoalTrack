@@ -1,6 +1,6 @@
 # 
 
-<p align = "center"><a href = ""https://github.com/rutvikshah28/GoalTrack"><img src="./img/logo%20round.png" width = "200" height = "200" alt = "GoalTrack" /></a></p> <br />
+<p align = "center"><a href = "https://github.com/rutvikshah28/GoalTrack"><img src="./img/logo%20round.png" width = "200" height = "200" alt = "GoalTrack" /></a></p> <br />
 <h2 align = "center"> <strong>GoalTrack</strong> </h2> <br />
 
 <details open="open">
