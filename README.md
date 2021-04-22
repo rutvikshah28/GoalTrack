@@ -89,7 +89,7 @@ Android Studio was chosen as the IDE for GoalTrack since it provides great featu
 #### __Programming Language__
 Kotlin was used as the main language for programming due to its modernness and easy usage. It also provides null safety and other important features. The other option was using java, but kotlin was easily the best choice for this.
 
->*Learn further about [Android Studio](https://developer.android.com/studio, "Android Studio") and [Kotlin.](https://kotlinlang.org/, "Kotlin")*
+>*Learn further about [Android Studio](https://developer.android.com/studio "Android Studio") and [Kotlin.](https://kotlinlang.org/ "Kotlin")*
 ___
 
 <h2 id="Developers" />
@@ -100,16 +100,18 @@ This section provides the configuration, installation and operating details for 
 <h3 id="dPre" />
 
 ### __Prerequisites__
-* An IDE of your choice is needed to analyze and test the project. *[Android Studio](https://developer.android.com/studio, "Android Studio Download")* is highly recommended but other options include *[Visual Studio Code](https://code.visualstudio.com/, "Visual Studio Code Download")* if that is more familiar. Although Visual Studio Code won't be a proper IDE, it is light weight and handy. If you feel comfortable with other tools, those can be used as well.
+* An IDE of your choice is needed to analyze and test the project. *[Android Studio](https://developer.android.com/studio "Android Studio Download")* is highly recommended but other options include *[Visual Studio Code](https://code.visualstudio.com/ "Visual Studio Code Download")* if that is more familiar. Although Visual Studio Code won't be a proper IDE, it is light weight and handy. If you feel comfortable with other tools, those can be used as well.
 
-* Knowledge about Kotlin is a must. You can learn about Kotlin from its *[documentation.](https://kotlinlang.org/docs/home.html, "Kotlin Documentation")*
+* Knowledge about Kotlin is a must. You can learn about Kotlin from its *[documentation.](https://kotlinlang.org/docs/home.html "Kotlin Documentation")*
 <h3 id="dIns" />
 
-* Knowledge about *[Java](https://docs.oracle.com/javase/7/docs/api/, "Java Documentation")* is always a plus since the underlying mechanisms of android work with java.
+### __Installation Instructions__
 
-* Knowledge about *[XML](https://www.w3.org/XML/, "XML Documentation")* is also required since Android deals with xml files a lot.
+* Knowledge about *[Java](https://docs.oracle.com/javase/7/docs/api/ "Java Documentation")* is always a plus since the underlying mechanisms of android work with java.
+
+* Knowledge about *[XML](https://www.w3.org/XML/ "XML Documentation")* is also required since Android deals with xml files a lot.
 * Conceptual knowledge about MVC architecture, Object-Oriented Programming and other android development fundamentals is a plus.
-* Knowledge about Github and Git is strongly recommended. There are numerous videos on youtube to explain the basics, a personal suggestion is *[this](https://youtu.be/SWYqp7iY_Tc, "Git and Github Crash Course")* one.
+* Knowledge about Github and Git is strongly recommended. There are numerous videos on youtube to explain the basics, a personal suggestion is *[this](https://youtu.be/SWYqp7iY_Tc "Git and Github Crash Course")* one.
 * Android SDK minimum version of 26 is required. An android device to run the application on is a plus with Android version 8.0 or higher.
 
 ### __Installation Instructions__
@@ -261,34 +263,62 @@ ___
 
 ### __Installation Instructions__
 To install this application on your device, it is assumed you match the prerequisites mentioned above. The next steps are outlined below:
-1. Open this github repository from a browser in the device you want to install GoalTrack into. Alternatively, you can follow this link to download the *[apk.]()
+1. Open this github repository from a browser in the device you want to install GoalTrack into. Alternatively, you can follow this link to download the *[apk.](https://github.com/rutvikshah28/GoalTrack/blob/master/GoalTrack.apk "APK Download")*
 2. Find the file named 'GoalTrack.apk' in this repository
 3. Download this apk onto the device and simply follow the instructions on the device to install.
 4. Once done, simply find the application on your device, open it up and start enjoying tracking of your tasks and goals.
-
+___
 
 <h2 id="Op" />
 
 ## __Operating Instructions__
 
-Assuming that you have the application installed, we will now glance at how it work.
+Assuming that you have the application installed, we will now glance at how it works with visual examples of the functionality.
 
+### *Creating a User Profile*
+
+### *Adding a Goal*
+
+### *Updating a Goal*     
+
+### *Deleting a Goal*
+___
 
 <h2 id="BugList" /> 
 
 ## __Bug List__
+Known bugs and problems :
+* After First Time Setup, the user can still go back to the fragment since the readUsers is a val and initially it will be 0. There is a need to restart the app so the user can't go back.
+* After Deleting a Goal, the user can make use of the back key on the taskbar top-left to go back to the Goal that was deleted. This may provide an error if we delete a goal, go back and then try to update it.
+  
+If any more bugs are found, please use the contact section to reach out to me so I can work on fixing them.
 
+___
 <h2 id="Troubleshooting" />
 
 ## __Troubleshooting__
+* If the application crashes due to the updating of goals that are deleted, simply restart the application. 
+* If any other bugs are found, restarting the application is the best choice. 
+* There don't seem to be any bugs that may freeze the application yet, if some are found please contact me so I can understand and work on fixing them.
 
+___
 <h2 id="License" />
 
 ## __License__
-
+This project is licensed under the MIT License. Please find the LICENSE file in the root directory to learn more.
+___
 <h2 id="Contact" />
 
 ## __Contact__
+You can reach out to me via [email](mailto:rutvikshah28@hotmail.com?subject=[GitHub]%20GoalTrack).
+
+If you want to connect, 
+Instagram
+
+LinkedIN
+
+Website
+___
 
 <h2 id="Ack" />
 
